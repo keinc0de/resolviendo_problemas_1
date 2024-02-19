@@ -44,8 +44,8 @@ Para `box(2)`
 ---
 ## Escalera
 Crea una función que dibuje una escalera según su número de escalones.
- - Si el número es positivo, será ascendente de izquiera a derecha.
- - Si el número es negativo, será descendente de izquiera a derecha.
+ - Si el número es positivo, será ascendente de izquierda a derecha.
+ - Si el número es negativo, será descendente de izquierda a derecha.
  - Si el número es cero, se dibujarán dos guiones bajos (__).
  
 **Ejemplo:** para el numero 4
@@ -58,4 +58,22 @@ Crea una función que dibuje una escalera según su número de escalones.
 ```
 ### Solucion
 ![](para_md/escalera_cap.gif)
+
+---
+## Trifuerza
+Crea un programa que dibuje una Trifuerza de "Zelda"
+formada por asteriscos.
+- Debes indicarle el número de filas de los triángulos con un entero positivo (n).
+- Cada triángulo calculará su fila mayor utilizando la fórmula 2n-1.
+ 
+**Ejemplo:** Trifuerza 2
+ 
+```
+     *
+    ***
+   *   *
+  *** ***
+```
+### Solucion
+![](para_md/trifuerza_cap.gif)
 
