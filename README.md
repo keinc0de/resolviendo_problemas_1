@@ -122,3 +122,10 @@ La pieza aparecerá por primera vez en la parte superior izquierda de la pantall
  * Las acciones que se pueden aplicar a la pieza son: derecha, izquierda, abajo, rotar.
  * Debes tener en cuenta los límites de la pantalla de juego.
 
+### Notas
+* para la figura se uso una matriz de 3x3 para asignarle metodos
+* cuando se gira la pieza lo hace de modo que usa 3 columnas, por lo que se corrigio el limite cuando la pieza estaba en vertical para que pueda ir hasta el borde
+* para las posiciones se uso una tupla con el siguiente orden
+![](para_md/tetris_figura_L.jpg)
+### Como quedo
+![](para_md/tetris_figura.gif)

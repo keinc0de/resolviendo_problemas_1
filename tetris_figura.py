@@ -2,9 +2,7 @@ import tkinter as tk
 
 
 class Figura:
-	INDICE=0
-	COL=0
-	FIL=0
+	INDICE, COL, FIL = 0, 0, 0
 	RANGO=10
 	def __init__(self, char='*', esp='_'):
 		self.esp, self.char = esp, char
@@ -30,7 +28,7 @@ class Figura:
 			self.dibuja()
 		
 	def der(self):
-		limite = self.RANGO-2 if self.INDICE==3 else self.RANGO-3
+		n = 2 if self.INDICE==3 else 3
 		if self.COL<self.RANGO-n:
 			self.COL+=1
 			
@@ -43,26 +41,28 @@ class Figura:
 		n = 2 if self.INDICE==0 else 3
 		if self.FIL<self.RANGO-n:
 			self.FIL+=1
+
+	def restaura(self):
+		self.FIL, self.COL = 0, 0
+		self.INDICE = 0
+		self.dibuja()
 			
 
 class TetrisFigura(tk.Tk):
 	def __init__(self, **kw):
 		super().__init__(**kw)
-		self.geometry('180x220')
-		
-		self.figura = Figura(esp='-',char='*')
-		fo = ('Segoe Ui', 10, 'bold')
-		self.txt = tk.Text(
-			self, bg='black', fg='white', font=fo
-		)
+		self.geometry('200x220')
+		self.figura = Figura(esp='🔲',char='🔳')
+		fo = ('Segoe Ui', 12, 'bold')
+		self.txt = tk.Text(self, bg='black', fg='gray', font=fo)
 		self.txt.pack(fill='both', expand=1)
 		self.acceso()
 		self.muestra()
+		self.title('Tetris')
 		
 	def acceso(self):
-		d = {
-			'<Left>':self.izq, '<Right>':self.der, '<Down>':self.baja, '<space>':self.gira '<Up>':self.gira,
-		}
+		d = {'<Left>':self.izq, '<Right>':self.der, '<Down>':self.baja,
+			'<space>':self.restaura, '<Up>':self.gira}
 		for c, v in d.items():
 			self.bind(c,v)
 			
@@ -70,8 +70,7 @@ class TetrisFigura(tk.Tk):
 		self.txt.delete('1.0', 'end')
 		self.figura.dibuja()
 		for fila in self.figura.mz:
-			linea = ''.join(fila)
-			self.txt.insert('end', f"{linea}\n")
+			self.txt.insert('end', f"{''.join(fila)}\n")
 		self.txt.tag_configure('ct', justify='center')
 		self.txt.tag_add('ct', '1.0', 'end')
 		
@@ -90,18 +89,12 @@ class TetrisFigura(tk.Tk):
 	def gira(self, e):
 		self.figura.gira()
 		self.muestra()
+
+	def restaura(self, e):
+		self.figura.restaura()
+		self.muestra()
 		
 		
 if __name__=="__main__":
 	vn = TetrisFigura()
 	vn.mainloop()
-
-		
-		
-		
-		
-		
-		
-		
-		
-		
