@@ -129,3 +129,18 @@ La pieza aparecerá por primera vez en la parte superior izquierda de la pantall
 ![](para_md/tetris_figura_L.jpg)
 ### Como quedo
 ![](para_md/tetris_figura.gif)
+
+## CIFRADO CESAR
+Crea un programa que realize el cifrado César de un texto y lo imprima.
+ * También debe ser capaz de descifrarlo cuando así se lo indiquemos.
+
+![](para_md/cc.gif)
+
+>El Cifrado de Cesar es uno de los métodos de codificación conocidos más antiguos. Es muy simple - sólo se cambian las posiciones del alfabeto
+
+
+```
+Por ejemplo, con un desplazamiento de 3
+la A sería sustituida por la D (situada 3 lugares a la derecha de la A)
+la B sería reemplazada por la E
+```
