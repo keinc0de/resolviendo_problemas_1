@@ -144,3 +144,19 @@ Por ejemplo, con un desplazamiento de 3
 la A sería sustituida por la D (situada 3 lugares a la derecha de la A)
 la B sería reemplazada por la E
 ```
+
+## TECLADO T9
+Los primeros dispositivos móviles tenían un teclado llamado T9 con el que se podía escribir texto utilizando únicamente su teclado numérico del 0 al 9 
+***(se me olvido colocar el cero)**
+
+![](para_md/t9.gif)
+
+* arriba a la izquierda muestra la letra actual
+* arriba a la derecha el texto escrito (se asigna con click derecho)
+
+
+
+ 
+
+
+
